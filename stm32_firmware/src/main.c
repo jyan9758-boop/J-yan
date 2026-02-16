@@ -2,6 +2,9 @@
  * @file main.c
  * @brief Main application for fire inspection robot
  * @description STM32 firmware main application integrating all modules
+ * 
+ * @note This is a template implementation. Hardware initialization and HAL-specific
+ *       functions should be implemented according to your STM32 board configuration.
  */
 
 #include "motor_control.h"

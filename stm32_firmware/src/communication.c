@@ -1,6 +1,11 @@
 /**
  * @file communication.c
  * @brief Communication interface implementation
+ * 
+ * @note This is a template implementation for STM32 firmware.
+ *       Uncommented code sections with placeholders (e.g., HAL_GetTick(), 
+ *       UART_SendByte()) should be replaced with actual HAL library calls
+ *       specific to your STM32 board and configuration.
  */
 
 #include "communication.h"
@@ -58,17 +63,23 @@ int comm_send_packet(const CommPacket_t *packet) {
 
 /**
  * @brief Receive packet from computer vision module
+ * @note This is a template implementation. In actual use:
+ *       - Replace placeholder time functions with HAL_GetTick() or equivalent
+ *       - Replace placeholder UART functions with actual HAL UART functions
+ *       - Adjust for specific STM32 HAL library being used
  */
 int comm_receive_packet(CommPacket_t *packet, uint32_t timeout_ms) {
     if (packet == NULL) {
         return -1;
     }
     
-    uint32_t start_time = 0;  /* Get current time in ms */
+    uint32_t start_time = 0;  /* Get current time in ms using HAL_GetTick() or similar */
+    /* start_time = HAL_GetTick(); */
     
     /* Wait for header byte */
     while (1) {
-        uint32_t current_time = 0;  /* Get current time in ms */
+        uint32_t current_time = 0;  /* Get current time in ms using HAL_GetTick() or similar */
+        /* current_time = HAL_GetTick(); */
         if ((current_time - start_time) > timeout_ms) {
             return -1;  /* Timeout */
         }

@@ -1,6 +1,9 @@
 /**
  * @file motor_control.c
  * @brief Motor control implementation for autonomous robot
+ * 
+ * @note This is a template implementation. Hardware-specific code (GPIO, PWM, etc.)
+ *       should be implemented using the STM32 HAL library for your specific board.
  */
 
 #include "motor_control.h"

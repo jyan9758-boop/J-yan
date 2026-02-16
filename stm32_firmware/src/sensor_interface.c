@@ -1,6 +1,9 @@
 /**
  * @file sensor_interface.c
  * @brief Sensor interface implementation for fire detection
+ * 
+ * @note This is a template implementation. ADC and sensor-specific code
+ *       should be implemented using the STM32 HAL library and sensor datasheets.
  */
 
 #include "sensor_interface.h"
