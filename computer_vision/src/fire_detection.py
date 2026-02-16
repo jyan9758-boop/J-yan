@@ -109,7 +109,7 @@ class FireDetector:
         # Apply threshold
         fire_detected = fire_detected and (confidence >= self.confidence_threshold)
         
-        return fire_detected, confidence, best_bbox
+        return bool(fire_detected), confidence, best_bbox
     
     def detect_smoke(self, frame: np.ndarray) -> Tuple[bool, float]:
         """
@@ -141,7 +141,7 @@ class FireDetector:
         
         smoke_detected = smoke_confidence > 0.5
         
-        return smoke_detected, smoke_confidence
+        return bool(smoke_detected), float(smoke_confidence)
     
     def annotate_frame(self, frame: np.ndarray, fire_detected: bool, 
                        confidence: float, bbox: Optional[Tuple]) -> np.ndarray:
